@@ -1,0 +1,72 @@
+<ion-content>
+  <ion-select
+    class="custom-select"
+    interface="popover"
+    [placeholder]="'language.placeholder' | translate"
+    [value]="translate.defaultLang"
+    (ionChange)="onLanguageChange($event)"
+  >
+    <ion-select-option
+      *ngFor="let language of languageOptions"
+      [value]="language.keyValue"
+      >{{ language.textValue | translate }}</ion-select-option
+    >
+  </ion-select>
+  <div class="login">
+    <ion-card>
+      <ion-card-header>
+        <div class="login__icon">
+          <ion-img src="../../../assets/images/logo.jpg"></ion-img>
+        </div>
+        <ion-card-title> {{ "subtitle" | translate }} </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+          <div class="login__form">
+            <ion-item lines="inset">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input
+                type="mail"
+                [placeholder]="'loginForm.emailPlaceholder' | translate"
+                formControlName="email"
+              ></ion-input>
+            </ion-item>
+            <ion-note class="errorMessage" *ngIf="!emailValid">{{
+              "loginForm.errors.emailInvalid" | translate
+            }}</ion-note>
+            <ion-item lines="inset">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input
+                type="password"
+                placeholder="Contraseña"
+                [placeholder]="'loginForm.passwordPlaceholder' | translate"
+              ></ion-input>
+            </ion-item>
+            <ion-note class="errorMessage" *ngIf="!passwordValid">{{
+              "loginForm.errors.passwordInvalid" | translate
+            }}</ion-note>
+            <ion-item lines="none">
+              <ion-label>{{ "loginForm.rememberMe" | translate }}</ion-label>
+              <ion-toggle formControlName="remember"></ion-toggle>
+            </ion-item>
+            <ion-item lines="none" class="login__form--button-desktop">
+              <ion-button
+                class="button-secondary"
+                type="submit"
+                shape="round"
+                size="medium"
+                >{{ "loginForm.accessButton" | translate }}</ion-button
+              >
+            </ion-item>
+          </div>
+          <ion-button
+            class="login__form--button-mobile"
+            expand="full"
+            type="submit"
+            >{{ "loginForm.accessButton" | translate }}</ion-button
+          >
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

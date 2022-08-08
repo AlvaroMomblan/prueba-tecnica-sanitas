@@ -1,0 +1,19 @@
+{
+  "subtitle": "Technical test",
+  "loginForm": {
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "rememberMe": "Remember me",
+    "accessButton": "Access",
+    "errors": {
+      "emailInvalid": "The email must be valid",
+      "passwordInvalid": "The password must contain at least 5 characters"
+    }
+  },
+  "loginSuccess": "The login was successful",
+  "language": {
+    "placeholder": "Language",
+    "es": "Spanish",
+    "en": "English"
+  }
+}

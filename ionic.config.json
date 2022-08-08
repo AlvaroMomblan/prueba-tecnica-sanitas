@@ -1,5 +1,7 @@
 {
   "name": "prueba-sanitas",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

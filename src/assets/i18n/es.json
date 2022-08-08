@@ -1,0 +1,19 @@
+{
+  "subtitle": "Prueba técnica",
+  "loginForm": {
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Contraseña",
+    "rememberMe": "Recordar",
+    "accessButton": "Acceder",
+    "errors": {
+      "emailInvalid": "El campo email debe ser válido",
+      "passwordInvalid": "La contraseña debe contener al menos 5 caracteres"
+    }
+  },
+  "loginSuccess": "Ha iniciado sesión con éxito",
+  "language": {
+    "placeholder": "Idioma",
+    "es": "Español",
+    "en": "Inglés"
+  }
+}
